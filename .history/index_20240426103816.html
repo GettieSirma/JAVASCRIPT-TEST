@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Javascript Flash Course</title>
+    <link rel="stylesheet" href="./main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Work+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet"
+    />
+</head>
+
+<body>
+    <header>
+        <nav class="container">
+            <div class="nav-left-side">
+                <svg width="17" height="26" viewBox="0 0 17 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10.309 2.90741C10.309 2.90741 4.29997 8.73841 2.526 13.9214C2.40313 14.2804 2.73267 14.6124 3.10045 14.5192L13.2394 11.9481C13.9358 11.7715 14.5723 12.3638 14.368 13.0525C12.9552 17.8149 8.62911 23.5897 8.62911 23.5897"
+                        stroke="#A259FF" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+
+                <a href="/">Javascript Flash Course</a>
+            </div>
+
+            <button id="open-nav-menu">
+                <svg
+                    width="24"
+                    height="24"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3 12C3 11.5858 3.33579 11.25 3.75 11.25H20.25C20.6642 11.25 21 11.5858 21 12C21 12.4142 20.6642 12.75 20.25 12.75H3.75C3.33579 12.75 3 12.4142 3 12Z"
+                        fill="white"
+                    />
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3 6C3 5.58579 3.33579 5.25 3.75 5.25H15C15.4142 5.25 15.75 5.58579 15.75 6C15.75 6.41421 15.4142 6.75 15 6.75H3.75C3.33579 6.75 3 6.41421 3 6Z"
+                        fill="white"
+                    />
+                    <path
+                        fill-rule="evenodd"
+                        clip-rule="evenodd"
+                        d="M3 18C3 17.5858 3.33579 17.25 3.75 17.25H15C15.4142 17.25 15.75 17.5858 15.75 18C15.75 18.4142 15.4142 18.75 15 18.75H3.75C3.33579 18.75 3 18.4142 3 18Z"
+                        fill="white"
+                    />
+                </svg>
+            </button>
+
+            <div class="wrapper">
+                <ul>
+                    <li>
+                        <button id="close-nav-menu">
+                            <svg
+                                width="47"
+                                height="47"
+                                viewBox="0 0 47 47"
+                                fill="none"
+                                xmlns="http://www.w3.org/2000/svg"
+                            >
+                                <path
+                                    d="M11.7505 11.7495L35.2505 35.2495"
+                                    stroke="#A259FF"
+                                    stroke-width="6"
+                                />
+                                <path
+                                    d="M35.2502 11.7502L11.7502 35.2502"
+                                    stroke="#A259FF"
+                                    stroke-width="6"
+                                />
+                            </svg>
+                        </button>
+                    </li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#faqs">FAQs</a></li>
+                    <li class="socials">
+                        <p>Join our community</p>
+
+                        <div>
+                            <a href="#">
+                                <img src="./assets/socials/DiscordLogo.png" alt="Discord logo" />
+                            </a>
+                            <a href="#">
+                                <img src="./assets/socials/YoutubeLogo.png" alt="Youtube logo" />
+                            </a>
+                            <a href="#">
+                                <img src="./assets/socials/TwitterLogo.png" alt="Twitter logo" />
+                            </a>
+                            <a href="#">
+                                <img src="./assets/socials/InstagramLogo.png" alt="Instagram logo" />
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home" class="container greeting-section">
+            <div class="left-side">
+                <h1 id="greeting">Good Afternoon!</h1>
+
+                <div class="weather-group">
+                    <input type="radio" checked="true" id="celsius" name="temperature" />
+                    <label for="celsius">Celsius</label>
+                    <input type="radio" id="fahr" name="temperature" />
+                    <label for="fahr">Fahr</label>
+                </div>
+            </div>
+
+            <div class="right-side">
+                <p>Local time:</p>
+                <div class="local-time">
+                    <div class="time-holder">
+                        <span data-time="hours" class="time-number"></span>
+                        <span class="time-letter">Hours</span>
+                    </div>
+                    <span class="time-divider">:</span>
+                    <div class="time-holder">
+                        <span data-time="minutes" class="time-number"></span>
+                        <span class="time-letter">mins</span>
+                    </div>
+                    <span class="time-divider">:</span>
+                    <div class="time-holder">
+                        <span data-time="seconds" class="time-number"></span>
+                        <span class="time-letter">secs</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="gallery" class="gallery-section">
+            <img src="assets/gallery/image1.jpg " alt="" />
+
+            <div class="thumbnails">
+
+            </div>
+        </section>
+
+        <section id="products" class="container products-section">
+            <div class="products-filter">
+                <input type="radio" checked="true" id="all" name="products" />
+                <label for="all">
+            All
+            <span class="product-amount">3</span>
+          </label>
+                <input type="radio" id="paid" name="products" />
+                <label for="paid">
+                 
+            Paid
+            <span class="product-amount">2</span>
+          </label>
+                <input type="radio" id="free" name="products" />
+                <label for="free">
+            Free
+            <span class="product-amount">1</span>
+          </label>
+
+                <span class="glider"></span>
+            </div>
+
+            <div class="products-area">
+
+            </div>
+
+        </section>
+
+        <section id="faqs" class="container faqs-section">
+            <h3>Frequently Asked Questions</h3>
+
+            <details open>
+                <summary>FAQ 1</summary>
+
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ratione adipisci illum error, hic expedita numquam impedit explicabo vitae iure quae vero autem quia quibusdam tempora atque harum perferendis praesentium dolor!
+                </p>
+            </details>
+
+            <details>
+                <summary>FAQ 2</summary>
+
+                <p>
+                    Consequuntur earum pariatur dolorem repellat temporibus ducimus sunt suscipit repudiandae cupiditate in accusantium recusandae tempora sint eligendi, perferendis aspernatur architecto voluptas laborum adipisci neque voluptates consequatur.
+                </p>
+            </details>
+
+            <details>
+                <summary>FAQ 3</summary>
+
+                <p>
+                    Consequuntur earum pariatur dolorem repellat temporibus ducimus sunt suscipit repudiandae cupiditate in accusantium recusandae tempora sint eligendi, perferendis aspernatur architecto voluptas laborum adipisci neque voluptates consequatur.
+                </p>
+            </details>
+        </section>
+    </main>
+
+    <footer></footer>
+
+    <script>
+        const weatherAPIKey = "f76693de5c51ceb886c717bf7cb2d979";
+        const weatherAPIURL = `https://api.openweathermap.org/data/2.5/weather?lat={lat}&lon={lon}&appid={API key}&units=metric`;
+
+        const galleryImages = [{
+                src: "./assets/gallery/image1.jpg",
+                alt: "Thumbnail Image 1"
+            }, {
+                src: "./assets/gallery/image2.jpg",
+                alt: "Thumbnail Image 2"
+            },
+
+            {
+                src: "./assets/gallery/image3.jpg",
+                alt: "Thumbnail Image 3"
+            }
+        ];
+
+        const products = [{
+            title: "AstroFiction",
+            author: "John Doe",
+            price: 49.9,
+            image: "./assets/products/img6.png"
+        }, {
+            title: "Space Odissey",
+            author: "Marie Anne",
+            price: 35,
+            image: "./assets/products/img1.png"
+        }, {
+            title: "Doomed City",
+            author: "Jason Cobert",
+            price: 0,
+            image: "./assets/products/img2.png"
+        }, {
+            title: "Black Dog",
+            author: "John Doe",
+            price: 85.35,
+            image: "./assets/products/img3.png"
+        }, {
+            title: "My Little Robot",
+            author: "Pedro Paulo",
+            price: 0,
+            image: "./assets/products/img5.png"
+        }, {
+            title: "Garden Girl",
+            author: "Ankit Patel",
+            price: 45,
+            image: "./assets/products/img4.png"
+        }];
+
+        // Menu Section
+
+        function menuHandler() {
+            document.querySelector("#open-nav-menu").addEventListener("click", function() {
+                document.querySelector("header nav .wrapper").classList.add("nav-open");
+            });
+
+            document.querySelector("#close-nav-menu").addEventListener("click", function() {
+                document.querySelector("header nav .wrapper").classList.remove("nav-open");
+            });
+        }
+
+        //Weather Section
+        //weather
+        const weatherData = {
+            "Westlands": {
+                celsius: {
+                    temperature: 20,
+                    description: "partly cloudy",
+                },
+                fahr: {
+                    temperature: 68,
+                    description: "partly cloudy",
+                },
+            },
+            "Westlands": {
+                celsius: {
+                    temperature: 25,
+                    description: "sunny",
+                },
+                fahr: {
+                    temperature: 77,
+                    description: "sunny",
+                },
+            },
+        };
+
+        // Function to convert Celsius to Fahrenheit
+        function celsiusToFahrenheit(celsius) {
+            return (celsius * 9) / 5 + 32;
+        }
+
+        // Function to update the weather information
+        function updateWeatherInfo(location, temperatureUnit) {
+            const weather = weatherData[location][temperatureUnit];
+            const temp =
+                temperatureUnit === "celsius" ?
+                weather.temperature :
+                celsiusToFahrenheit(weather.temperature);
+            const message = `Todays weather in $ {
+                location
+            }
+            is $ {
+                weather.description
+            }
+            with a temperature of $ {
+                temp
+            }°
+            $ {
+                temperatureUnit
+            }.;
+            document.getElementById("weather").innerText = message;
+        }
+
+        // Add event listeners to temperature buttons
+        document.getElementById("celsius").addEventListener("click", () => {
+            updateWeatherInfo("Westlands", "celsius");
+        });
+
+        document.getElementById("fahr").addEventListener("click", () => {
+            updateWeatherInfo("Westlands", "fahr");
+        });
+
+        // Initialize the weather info
+        document.getElementById("fahr").click();
+
+        // Greeting Section
+
+        function greetingHandler() {
+            let currentHour = new Date().getHours();
+            let greetingText;
+
+            if (currentHour < 12) {
+                greetingText = "Good morning!";
+            } else if (currentHour < 18) {
+                greetingText = "Good afternoon!";
+            } else {
+                greetingText = "Good evening!";
+            }
+
+            document.querySelector("#greeting").textContent = greetingText;
+        }
+
+        // Call the greetingHandler function after the DOM has fully loaded
+        document.addEventListener("DOMContentLoaded", function() {
+            greetingHandler();
+        });
+
+
+
+
+
+        // Local Time Section
+        function clockHandler() {
+            setInterval(function() {
+                let localTime = new Date();
+                document.querySelector("span[data-time=hours]").textContent = localTime.getHours().toString().padStart(2, "0");
+                document.querySelector("span[data-time=minutes]").textContent = localTime.getMinutes().toString().padStart(2, "0");
+                document.querySelector("span[data-time=seconds]").textContent = localTime.getSeconds().toString().padStart(2, "0");
+            }, 1000);
+        }
+        // Gallery Section
+
+        function galleryHandler() {
+            let mainImage = document.querySelector("#gallery > img");
+            let thumbnails = document.querySelector("#gallery .thumbnails");
+
+            mainImage.src = galleryImages[0].src;
+            mainImage.alt = galleryImages[0].alt;
+
+            galleryImages.forEach(function(image, index) {
+                let thumb = document.createElement("img");
+                thumb.src = image.src;
+                thumb.alt = image.alt;
+                thumb.dataset.arrayIndex = index;
+                thumb.dataset.selected = index === 0 ? true : false;
+
+                thumb.addEventListener("click", function(e) {
+                    let selectedIndex = e.target.dataset.arrayIndex;
+                    let selectedImage = galleryImages[selectedIndex];
+                    mainImage.src = selectedImage.src;
+                    mainImage.alt = selectedImage.alt;
+                    thumbnails.querySelectorAll("img").forEach(function(img) {
+                        img.dataset.selected = false;
+                    });
+                    e.target.dataset.selected = true;
+
+                });
+
+                thumbnails.appendChild(thumb);
+            });
+        }
+
+        // Products Section
+
+        function populateProducts(productList) {
+
+            let productsSection = document.querySelector(".products-area");
+            productsSection.textContent = "";
+
+            // Run a loop through the products and create an HTML element ("product-item") for each of them
+            productList.forEach(function(product, index) {
+
+                // Create the HTML element for the individual product 
+                let productElm = document.createElement("div");
+                productElm.classList.add("product-item");
+
+                // Create the product image
+                let productImage = document.createElement("img");
+                productImage.src = product.image;
+                productImage.alt = "Image for " + product.title;
+
+                // Create the product details section
+                let productDetails = document.createElement("div");
+                productDetails.classList.add("product-details");
+
+                // Create product title, author, price-title and price
+                let productTitle = document.createElement("h3");
+                productTitle.classList.add("product-title");
+                productTitle.textContent = product.title;
+                let productAuthor = document.createElement("p");
+                productAuthor.classList.add("product-author");
+                productAuthor.textContent = product.author;
+                let priceTitle = document.createElement("p");
+                priceTitle.classList.add("price-title");
+                priceTitle.textContent = "Price";
+                let productPrice = document.createElement("p");
+                productPrice.classList.add("product-price");
+                productPrice.textContent = product.price > 0 ? "$" + product.price.toFixed(2) : "Free";
+
+                // Append the product details
+                productDetails.append(productTitle);
+                productDetails.append(productAuthor);
+                productDetails.append(priceTitle);
+                productDetails.append(productPrice);
+
+                // Add all child HTML elements of the product
+                productElm.append(productImage);
+                productElm.append(productDetails);
+
+                // Add complete individul product to the product section
+                productsSection.append(productElm);
+
+            });
+        }
+
+        function productsHandler() {
+
+            let freeProducts = products.filter(item => !item.price || item.price <= 0);
+
+            let paidProducts = products.filter(item => item.price > 0);
+
+            populateProducts(products);
+
+            document.querySelector(".products-filter label[for=all] span.product-amount").textContent = products.length;
+            document.querySelector(".products-filter label[for=paid] span.product-amount").textContent = paidProducts.length;
+            document.querySelector(".products-filter label[for=free] span.product-amount").textContent = freeProducts.length;
+
+            let productsFilter = document.querySelector(".products-filter");
+
+            productsFilter.addEventListener("click", function(e) {
+                if (e.target.id === "all") {
+                    populateProducts(products);
+                } else if (e.target.id === "paid") {
+                    populateProducts(paidProducts);
+                } else if (e.target.id === "free") {
+                    populateProducts(freeProducts);
+                }
+            });
+        }
+
+        function footerHandler() {
+            let currentYear = new Date().getFullYear();
+            document.querySelector("footer").textContent = `Ⓒ
+            $ {
+                currentYear
+            } - All rights reserved `;
+        }
+
+
+
+
+        // Page Load
+
+        menuHandler();
+        greetingHandler();
+        weatherHandler();
+        clockHandler();
+        galleryHandler();
+        productsHandler();
+        footerHandler();
+    </script>
+
+</body>
+
+</html>
